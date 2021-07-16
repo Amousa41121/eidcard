@@ -6,7 +6,7 @@ function saveImage() {
 	imageURL = location.protocol + '//' + location.host +"/card.php?lang=" + lang + "&name=" + empName;
 	const link = document.createElement('a');
 	link.href = imageURL;
-	link.download = 'card.png';
+	link.download = 'card';
 	document.body.appendChild(link);
 	link.click();
 	document.body.removeChild(link);
