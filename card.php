@@ -18,13 +18,13 @@ $text = $name;
 $size = 25;
 
 $text = $Arabic->utf8Glyphs($text);
-if ($lang == 'ar') {
+// if ($lang == 'ar') {
     // $obj = new I18N_Arabic('Glyphs');
     // $text = $obj->utf8Glyphs($text);
-    $font = dirname(__FILE__) . '/fontar.ttf';
-} else {
+//     $font = dirname(__FILE__) . '/fontar.ttf';
+// } else {
     $font = dirname(__FILE__) . '/fonten.ttf';
-}
+// }
 
 // determine the size of the text so we can center it
 $box = imagettfbbox($size, 0, $font, $text);
@@ -36,5 +36,5 @@ $x = ($image_width - $text_width) / 2;
 // $y = ($image_height + $text_height) / 2;
 
 imagettftext($jpg_image, $size, 0, $x, 910, $color, $font, $text);
-imagejpeg($jpg_image);
+imagejpeg($jpg_image, null, 100);
 imagedestroy($jpg_image);
