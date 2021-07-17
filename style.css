@@ -99,7 +99,8 @@ html>* {
   }
   
   #article-tip1-cover {
-    background: #0C0D11;
+    background: rgba(26,60,108,255)
+    ;
     color:white;
   }
   
